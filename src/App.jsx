@@ -7,18 +7,16 @@ function App() {
       <Menu className="absolute" />
       <div>
         <div className="relative">
-          <Inicio />
+          <Inicio/>
           {/* Laptop */}
-          <img
-            src="/laptop.svg"
-            alt="Laptop"
-            className="absolute right-[6%] bottom-[10%] w-200"
+          <img src="/laptop.svg" alt="Laptop"
+            className="absolute lg:right-[6%] lg:bottom-[14%] md:right-[5%] md:bottom-[25%] 
+            lg:w-175 md:w-100 w-50  md:flex hidden"
           />
           {/* Celular */}
-          <img
-            src="/celular.svg"
-            alt="Celular"
-            className="absolute right-[5%] bottom-[10%] rotate-3 w-40 z-10"
+          <img src="/celular.svg" alt="Celular"
+            className="absolute lg:right-[5%] lg:bottom-[14%] md:right-[5%] md:bottom-[25%] 
+            rotate-3 lg:w-35 md:w-20 w-10 z-10 md:flex hidden"
           />
         </div>
       </div>
