@@ -1,1 +1,10 @@
 @import "tailwindcss";
+@import "@fontsource-variable/host-grotesk";
+@import "@fontsource-variable/host-grotesk/wght-italic.css";
+@import "@fontsource-variable/inter/opsz.css";
+@import "@fontsource-variable/inter/opsz-italic.css";
+
+@theme {
+  --font-host: "Host Grotesk Variable", sans-serif;
+  --font-inter: "Inter Variable", sans-serif;
+}
