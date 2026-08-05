@@ -10,8 +10,10 @@ function Inicio() {
                 <div></div>
                 <div className="flex justify-between z-10">
                     <div className="flex flex-col md:gap-5 gap-3">
-                        <h3 className="text-[#0465F1] text-sm md:text-md">DESARROLLO WEB PROFESIONAL</h3>
-                        <h1 className="text-[#EAE9E9] text-4xl md:text-6xl font-bold font-host">Páginas web que <br /><span className="text-[#0465F1]">impulsan</span> tu negocio</h1>
+                        <div>
+                            <h3 className="text-[#0465F1] text-sm md:text-md">DESARROLLO WEB PROFESIONAL</h3>
+                            <h1 className="text-[#EAE9E9] text-4xl md:text-6xl font-bold font-host">Páginas web que <br /><span className="text-[#0465F1]">impulsan</span> tu negocio</h1>
+                        </div>
                         <p className="text-[#D1D5DB] text-md md:text-lg font-inter">Diseñamos y desarrollamos sitios web modernos,<br /> rápidos y adaptados
                             a todos los disporitivos para <br /> que tu negocio crezca en internet.
                         </p>
