@@ -1,6 +1,7 @@
 import Menu from './components/Menu'
-import Inicio from './assets/inicio/Inicio'
-import UsPart1   from './assets/nosotros/UsPart1'
+import Inicio from './assets/start/Start'
+import UsPart1 from './assets/us/UsPart1'
+import UsPart2 from './assets/us/UsPart2'
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           />
         </div>
       <UsPart1/>
+      <UsPart2/>
     </div>
   )
 }

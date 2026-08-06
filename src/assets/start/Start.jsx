@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react"
 
-function Inicio() {
+function Start() {
     return (
         <div className="bg-cover bg-center" style={{
             height: "calc(100vh - 72px)",
@@ -46,4 +46,4 @@ function Inicio() {
             </div>
         </div>
     )
-} export default Inicio
+} export default Start
