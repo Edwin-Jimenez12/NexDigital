@@ -10,7 +10,7 @@ function Inicio() {
                 <div></div>
                 <div className="flex justify-between z-10">
                     <div className="flex flex-col md:gap-5 gap-3">
-                        <div>
+                        <div> {/* TEXTO */}
                             <h3 className="text-[#0465F1] text-sm md:text-md">DESARROLLO WEB PROFESIONAL</h3>
                             <h1 className="text-[#EAE9E9] text-4xl md:text-6xl font-bold font-host">Páginas web que <br /><span className="text-[#0465F1]">impulsan</span> tu negocio</h1>
                         </div>
@@ -29,8 +29,8 @@ function Inicio() {
                         </div>
                     </div>
                 </div>
-                <div className="text-[#EAE9E9] lg:text-2xl md:text-xl text-md z-30 md:flex gap-15 py-4 md:py-7 font-bold mr-3 ">{/*
-                */}
+                <div className="text-[#EAE9E9] lg:text-2xl md:text-xl text-md z-30 md:flex gap-15 py-4 md:py-7 font-bold mr-3 ">
+                    {/*Empresas*/}
                     <h1 className="mb-3 opacity-90">Empresas que <br /> confian en nosotros</h1>
                     <div className="flex gap-10">
                     <a href="https://filldgap.com/">
