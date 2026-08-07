@@ -61,7 +61,7 @@ function UsPart2() {
             </div>
             <div className='flex flex-col md:flex-row justify-between py-5 bg-[#060D17] rounded-xl text-[#EAE9E9] items-center text-inter'>
                 <div className='flex flex-col md:flex-row md:gap-10 items-center'>
-                    <img src="/public/images/rocket.svg" alt="Rocket" className='h-30 w-auto flex rounded-lg md:pl-5'/>
+                    <img src="/images/rocket.svg" alt="Rocket" className='h-30 w-auto flex rounded-lg md:pl-5'/>
                 <div className='md:max-w-xl p-5'>
                     <h1 className='md:text-2xl text-lg font-host font-bold '>¿Listo para llevar tu negocio al siguiente nivel?</h1>
                     <p className='md:text-lg text-md text-[#EAE9E9]/90'>Elige el plan ideal para ti y comencemos a construir tu página we profesional hoy mismo.</p>

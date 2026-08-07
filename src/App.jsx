@@ -2,6 +2,7 @@ import Menu from "./components/Menu";
 import Start from "./assets/start/Start";
 import UsPart1 from "./assets/us/UsPart1";
 import UsPart2 from "./assets/us/UsPart2";
+import bottom from "./components/bottom";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
       {/* Resto de la página */}
       <UsPart1 />
       <UsPart2 />
+      <bottom/>
     </main>
   );
 }
