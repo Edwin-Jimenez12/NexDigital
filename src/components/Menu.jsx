@@ -22,7 +22,7 @@ function Menu() {
                     {menuItems.map((item) => (
                         <div key={item.nombre} className="group flex flex-col items-center text-[#EAE9E9]">
                             <a href={item.enlace} className="cursor-pointer duration-300 
-                        group-hover:text-[#0465F1]"> {item.nombre}</a>
+                        group-hover:text-[#0465F1] font-host font-bold"> {item.nombre}</a>
                             <div className="w-full h-[3px] bg-[#0465F1] rounded-full scale-x-0 group-hover:scale-x-100 transition duration-300"></div>
                         </div>
                     ))}
@@ -30,9 +30,9 @@ function Menu() {
                 {/* Contacto */}
                 <button className="bg-[#0465F1] cursor-pointer text-[#EAE9E9] py-3 px-6 rounded-md 
                 hidden md:flex gap-2 items-center hover:bg-transparent transition duration-300 
-                border-1 border-[#0465F1] hover:border-[#EAE9E9] text-lg"
+                border-1 border-[#0465F1] hover:border-[#EAE9E9] text-lg font-host"
                 >
-                    <span>Hablemos</span> <FaWhatsapp className="w-5  text-[#EAE9E9]" />
+                    <span className='font-host font-bold'>Hablemos</span> <FaWhatsapp className="h-6 w-auto  text-[#EAE9E9]" />
                 </button>
                 
                 {/* Boton movil */}
@@ -58,20 +58,20 @@ function Menu() {
             overflow-hidden bg-black/10 text-xl backdrop-blur-md
             transition-all duration-500 md:hidden
                 ${isOpen
-                    ? "max-h-96 opacity-100 py-4"
+                    ? "h-[calc(100dvh-72px)] opacity-100 py-4"
                     : "max-h-0 opacity-0 py-0"
                 }`}>
                 {/* Menu movil */}
                 {menuItems.map((item) => (
                     <div key={item.nombre} className={`group flex flex-col items-center text-[#EAE9E9] `}>
                         <a href={item.enlace} className="cursor-pointer duration-300 
-                        group-hover:text-[#0465F1]"> {item.nombre}</a>
+                        group-hover:text-[#0465F1] font-host font-bold"> {item.nombre}</a>
                         <div className="w-full h-[3px] bg-[#0465F1] rounded-full scale-x-0 group-hover:scale-x-100 transition duration-300"></div>
                     </div>
                 ))}
-                <button className="flex items-center justify-center gap-2 rounded-md bg-[#0465F1] px-4 py-2">
-                    <span>Hablemos</span>
-                    <FaWhatsapp className="w-5" />
+                <button className="flex items-center justify-center gap-2 rounded-md bg-[#0465F1] px-4 py-2 mt-10">
+                    <span className='font-host font-bold text-[#EAE9E9]'>Hablemos</span>
+                    <FaWhatsapp className="h-6 w-auto text-[#EAE9E9]" />
                 </button>
             </div>
         </header>
