@@ -1,30 +1,48 @@
-import Menu from './components/Menu'
-import Inicio from './assets/start/Start'
-import UsPart1 from './assets/us/UsPart1'
-import UsPart2 from './assets/us/UsPart2'
+import Menu from "./components/Menu";
+import Start from "./assets/start/Start";
+import UsPart1 from "./assets/us/UsPart1";
+import UsPart2 from "./assets/us/UsPart2";
 
 function App() {
   return (
-    <div className="flex h-dvh flex-col bg-[#000000]">
-      <Menu className="absolute" />
+    <main className="min-h-screen bg-black">
+      {/* Hero con fondo */}
+      <section
+        className="relative min-h-dvh bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/fondoInicio.png')",
+        }}
+      >
+        <Menu />
 
-        <div className="relative ">
-          <Inicio/>
-          {/*Imagen Laptop */}
-          <img src="/laptop.svg" alt="Laptop"
-            className="absolute lg:right-[6%] lg:bottom-[14%] md:right-[5%] md:bottom-[25%] 
-            lg:w-175 md:w-100 w-50  md:flex hidden transition-all duration-300"
+        <div className="relative min-h-dvh">
+          <Start />
+
+          {/* Imagen Laptop */}
+          <img
+            src="/laptop.svg"
+            alt="Laptop"
+            className="absolute hidden transition-all duration-300
+            md:bottom-[25%] md:right-[5%] md:block md:w-100
+            lg:bottom-[14%] lg:right-[6%] lg:w-175"
           />
-          {/*Imagen Celular */}
-          <img src="/celular.svg" alt="Celular"
-            className="absolute lg:right-[5%] lg:bottom-[14%] md:right-[5%] md:bottom-[25%] 
-            rotate-3 lg:w-35 md:w-20 w-10 z-10 md:flex hidden transition-all duration-300"
+
+          {/* Imagen Celular */}
+          <img
+            src="/celular.svg"
+            alt="Celular"
+            className="absolute z-10 hidden rotate-3 transition-all duration-300
+            md:bottom-[25%] md:right-[5%] md:block md:w-20
+            lg:bottom-[14%] lg:right-[5%] lg:w-35"
           />
         </div>
-      <UsPart1/>
-      <UsPart2/>
-    </div>
-  )
+      </section>
+
+      {/* Resto de la página */}
+      <UsPart1 />
+      <UsPart2 />
+    </main>
+  );
 }
 
-export default App
+export default App;

@@ -11,9 +11,9 @@ function Menu() {
         { nombre: "Proyectos", enlace: "#proyectos", },
     ];
     return (
-        <header>
+        <header className="absolute left-0 top-0 z-50 w-full">
             {/* Barra principal */}
-            <div className="flex justify-between text-[#EAE9E9] items-center p-3">
+            <div className="flex items-center justify-between bg-[#060D17] p-3 text-[#EAE9E9]  md:bg-transparent md:backdrop-blur-none">
                 {/* Logos */}
                 <img src="/logo.svg" alt="Logo principal" className='h-15 w-auto hidden md:flex' />
                 <img src="/n.svg" alt="Logo principal" className='h-10 w-auto md:hidden' />
@@ -34,6 +34,7 @@ function Menu() {
                 >
                     <span>Hablemos</span> <FaWhatsapp className="w-5  text-[#EAE9E9]" />
                 </button>
+                
                 {/* Boton movil */}
                 <button
                     type="button"
@@ -53,9 +54,10 @@ function Menu() {
                 </button>
             </div>
             {/* Movil */}
-            <div className={`flex flex-col items-center gap-7 text-xl bg-[#000000]
-    overflow-hidden transition-all duration-500 md:hidden
-    ${isOpen
+            <div className={`absolute left-0 top-full z-50 flex w-full flex-col items-center gap-7
+            overflow-hidden bg-black/10 text-xl backdrop-blur-md
+            transition-all duration-500 md:hidden
+                ${isOpen
                     ? "max-h-96 opacity-100 py-4"
                     : "max-h-0 opacity-0 py-0"
                 }`}>

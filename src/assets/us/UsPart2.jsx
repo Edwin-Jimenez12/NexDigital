@@ -7,7 +7,7 @@ function UsPart2() {
                 <h1 className="font-host font-bold text-2xl text-[#000000]/90">Soluciones web para impulsar tu presencia digital</h1>
             </div>
             {/* Cuadros */}
-            <div className="flex flex-col md:flex-row md:justify-between items-center gap-10 pb-5 items-stretch">
+            <div className="flex flex-col lg:flex-row md:justify-between items-center gap-10 pb-5 items-stretch">
                 {/* Cuadro 1 */}
                 <div className="border-1 rounded-xl p-4 flex flex-col gap-2">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0465F1]/15">
@@ -57,6 +57,21 @@ function UsPart2() {
                         <h2 className="font-host font-bold text-xl text-[#000000]">Mantenimiento web</h2>
                         <p className="font-inter text-sm text-[#000000]/70">Mantén tu sitio actualizado, seguro y funcionando siempre al 100%</p>
                     </div>
+                </div>
+            </div>
+            <div className='flex flex-col md:flex-row justify-between py-5 bg-[#060D17] rounded-xl text-[#EAE9E9] items-center text-inter'>
+                <div className='flex flex-col md:flex-row md:gap-10 items-center'>
+                    <img src="/public/images/rocket.svg" alt="Rocket" className='h-30 w-auto flex rounded-lg md:pl-5'/>
+                <div className='md:max-w-xl p-5'>
+                    <h1 className='md:text-2xl text-lg font-host font-bold '>¿Listo para llevar tu negocio al siguiente nivel?</h1>
+                    <p className='md:text-lg text-md text-[#EAE9E9]/90'>Elige el plan ideal para ti y comencemos a construir tu página we profesional hoy mismo.</p>
+                </div>
+                </div>
+                <div className='md:pr-10 hover:scale-105 transition duration-300 '>
+                    <button className="text-inter bg-[#0465F1] cursor-pointer text-[#EAE9E9] hover:text-[#FFFFFF] transition duration-300  py-2 px-6 rounded-md items-center  text-lg"
+                >
+                    Ver planes y precios
+                </button>
                 </div>
             </div>
         </div>

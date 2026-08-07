@@ -11,7 +11,7 @@ function UsPart1 (){
                 </p>
             </div>
             {/* Cuadros */}
-            <div className="text-[#EEEEEE] flex flex-col md:flex-row md:justify-between items-center gap-10 pb-5">
+            <div className="text-[#EEEEEE] flex flex-col md:flex-row md:justify-between items-center gap-10 pb-5 items-stretch">
                 {/* Cuadro 1 */}
                 <div className="bg-[#0D1520] rounded-xl p-4 flex flex-col gap-2">
                     <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#0465F1]/15">
