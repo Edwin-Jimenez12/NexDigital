@@ -5,7 +5,8 @@ function PanamaViajero() {
             <div className="p-3 rounded-t-xl">
                 <img src="/images/Panama-viajero/LogoRectangular.svg" alt="Logo Panama Viajero" className="h-10 w-auto" />
                 <div className="flex items-center gap-2">
-                    <img src="/images/Panama-viajero/PanamaViajero.svg" alt="Captura de la pagina" className="h-25 w-auto" />
+                    {/* Captura */}
+                    <img src="/images/Panama-viajero/PanamaViajero.svg" alt="Captura de la pagina" className="h-15 md:h-25 w-auto" />
                     <div className="flex flex-col gap-3">
                         <h1 className="font-host font-bold text-xl max-w-[200px] leading-none">Descrubre el Panamá <span className="text-[#CD2E4C]">que nadie te <br /> muestra</span></h1>
                         <p className="text-xs font-inter">Encuentra destinos, hospedajes, restaurantes y experiencias para explorar Panamá desde una sola aplicación.</p>

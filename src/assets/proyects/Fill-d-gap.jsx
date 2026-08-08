@@ -6,7 +6,7 @@ function FillDGap() {
                 <img src="/images/FillDGap/fillDGapLogo.svg" alt="Logo Panama Viajero" className="h-10 w-auto" />
                 <div className="flex items-center gap-2">
                     {/* Captura */}
-                    <img src="/images/Panama-viajero/PanamaViajero.svg" alt="Captura de la pagina" className="h-25 w-auto" />
+                    <img src="/images/Panama-viajero/PanamaViajero.svg" alt="Captura de la pagina" className="h-15 md:h-25 w-auto" />
                     <div className="flex flex-col gap-3 text-[#111111]">
                         <h1 className="font-host font-bold text-xl max-w-[200px] leading-none">Cubrimos vacantes temporales con talento experto</h1>
                         <p className="text-xs font-inter">Somos una comunidad de profesionales independientes con vocación y trayectoria.</p>
