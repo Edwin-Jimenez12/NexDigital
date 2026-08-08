@@ -2,11 +2,12 @@ import Menu from "./components/Menu";
 import Start from "./assets/start/Start";
 import UsPart1 from "./assets/us/UsPart1";
 import UsPart2 from "./assets/us/UsPart2";
-import bottom from "./components/bottom";
+import Bottom from "./components/Bottom";
+import Proyects from "./assets/proyects/Proyects";
 
 function App() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="min-h-screen bg-black ">
       {/* Hero con fondo */}
       <section
         className="relative min-h-dvh bg-cover bg-center"
@@ -15,10 +16,8 @@ function App() {
         }}
       >
         <Menu />
-
         <div className="relative min-h-dvh">
           <Start />
-
           {/* Imagen Laptop */}
           <img
             src="/laptop.svg"
@@ -41,8 +40,9 @@ function App() {
 
       {/* Resto de la página */}
       <UsPart1 />
+      <Proyects/>
       <UsPart2 />
-      <bottom/>
+      <Bottom/>
     </main>
   );
 }
