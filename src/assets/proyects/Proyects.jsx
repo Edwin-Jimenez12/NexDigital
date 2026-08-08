@@ -1,15 +1,17 @@
 import PanamaViajero from './Panama-Viajero'
+import FillDGap from './Fill-d-gap'
 function Proyects (){
     return(
-        <div className="text-[#EAE9E9] font-host py-10 bg-gradient-to-r from-[#060D17] via-[#03070C] to-[#000000]">
+        <div className="flex flex-col gap-5 text-[#EAE9E9] font-host py-10 bg-gradient-to-r from-[#060D17] via-[#03070C] to-[#000000]">
             <div className="flex flex-col">
                 <div className="flex flex-col items-center">
                     <h1 className="font-bold text-2xl">Diseñamos experiencias digitales que marcan la difetencia</h1>
-                    <p className="text-[#EAE9E9]/75">Cada proyecto refleja nuestro compromiso con la calidad, el diseño moderno y soluciones que impulsan negocios reales.</p>
+                    <p className="text-[#EAE9E9]/75 max-w-xl text-center text-sm">Cada proyecto refleja nuestro compromiso con la calidad, el diseño moderno y soluciones que impulsan negocios reales.</p>
                 </div>
             </div>
-            <div className='px-10'>
+            <div className='flex gap-10 px-10'>
                 <PanamaViajero/>
+                <FillDGap/>
             </div>
         </div>
     )

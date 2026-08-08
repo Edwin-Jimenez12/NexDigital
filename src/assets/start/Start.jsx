@@ -59,7 +59,7 @@ function Start() {
 
                     <a href="https://panama-viajero.pages.dev/">
                         <img
-                            src="/LogoRectangular.svg"
+                            src="/images/Panama-viajero/LogoRectangular.svg"
                             alt="Panamá Viajero"
                             className="h-15 w-auto opacity-80 transition-all duration-300 hover:scale-105"
                         />

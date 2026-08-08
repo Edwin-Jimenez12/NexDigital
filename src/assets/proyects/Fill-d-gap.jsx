@@ -1,14 +1,15 @@
 import { ArrowRight } from "lucide-react"
-function PanamaViajero() {
+function FillDGap() {
     return (
-        <div className="rounded-xl border border-[#EAE9E9]/25 max-w-md bg-gradient-to-r from-[#060D17] to-[#4956A2]">
+        <div className="rounded-xl border border-[#EAE9E9]/25 max-w-md bg-gradient-to-r from-[#E9478F] to-[#EAE9E9]">
             <div className="p-3 rounded-t-xl">
-                <img src="/images/Panama-viajero/LogoRectangular.svg" alt="Logo Panama Viajero" className="h-10 w-auto" />
+                <img src="/images/FillDGap/fillDGapLogo.svg" alt="Logo Panama Viajero" className="h-10 w-auto" />
                 <div className="flex items-center gap-2">
+                    {/* Captura */}
                     <img src="/images/Panama-viajero/PanamaViajero.svg" alt="Captura de la pagina" className="h-25 w-auto" />
-                    <div className="flex flex-col gap-3">
-                        <h1 className="font-host font-bold text-xl max-w-[200px] leading-none">Descrubre el Panamá <span className="text-[#CD2E4C]">que nadie te <br /> muestra</span></h1>
-                        <p className="text-xs font-inter">Encuentra destinos, hospedajes, restaurantes y experiencias para explorar Panamá desde una sola aplicación.</p>
+                    <div className="flex flex-col gap-3 text-[#111111]">
+                        <h1 className="font-host font-bold text-xl max-w-[200px] leading-none">Cubrimos vacantes temporales con talento experto</h1>
+                        <p className="text-xs font-inter">Somos una comunidad de profesionales independientes con vocación y trayectoria.</p>
                     </div>
                 </div>
             </div>
@@ -16,7 +17,7 @@ function PanamaViajero() {
                 <div className="flex gap-3">
                     <img src="/images/Panama-viajero/LogoCuadrado.svg" alt="Logo" className="h-10 w-auto" />
                     <div>
-                        <h1 className="font-bold text-xl">Panamá Viajero</h1>
+                        <h1 className="font-bold text-xl">FILL D GAP</h1>
                         <p className="font-inter text-[#EAE9E9]/75 text-xs">Plataforma digital que conecta viajeros con
                             los mejores destinos, hospedajes, restaurantes y experiencias de Panamá.</p>
                     </div>
@@ -29,4 +30,4 @@ function PanamaViajero() {
             </div>
         </div>
     )
-} export default PanamaViajero
+} export default FillDGap
