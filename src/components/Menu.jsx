@@ -6,8 +6,8 @@ function Menu() {
     const [isOpen, setIsOpen] = useState(false)
     const menuItems = [
         { nombre: "Inicio", enlace: "#inicio", },
-        { nombre: "Nosotros", enlace: "#nosotros", },
-        { nombre: "Planes", enlace: "#planes", },
+        { nombre: "Conocenos", enlace: "#nosotros", },
+        { nombre: "Planes", enlace: "/planes", },
         { nombre: "Proyectos", enlace: "#proyectos", },
     ];
     return (

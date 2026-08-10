@@ -51,7 +51,7 @@ function Start() {
                 <div className="flex gap-10 pr-5">
                     <a href="https://filldgap.com/">
                         <img
-                            src="/fillDGapLogo.svg"
+                            src="/images/FillDGap/fillDGapLogo.svg"
                             alt="FILL D GAP"
                             className="h-20 w-auto opacity-90 transition-all duration-300 hover:scale-105"
                         />

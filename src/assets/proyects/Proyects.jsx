@@ -9,7 +9,7 @@ function Proyects (){
                     <p className="text-[#EAE9E9]/75 max-w-xl text-center text-sm">Cada proyecto refleja nuestro compromiso con la calidad, el diseño moderno y soluciones que impulsan negocios reales.</p>
                 </div>
             </div>
-            <div className='flex flex-col md:flex-row gap-10 px-10'>
+            <div className='flex flex-col md:flex-row gap-10 px-10 justify-center'>
                 <PanamaViajero/>
                 <FillDGap/>
             </div>
