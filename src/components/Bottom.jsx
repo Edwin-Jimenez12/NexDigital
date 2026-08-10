@@ -9,9 +9,9 @@ function Bottom() {
         { contacto: 'Lun-Vie: 9:00 am-6:00 pm.', icon: Clock5 }
     ]
     const follow = [
-        {follow: 'Instagram', icon: FaInstagram},
-        {follow: 'Facebook', icon: FaFacebook},
-        {follow: 'WhatsApp', icon: FaWhatsapp}
+        {follow: 'Instagram', icon: FaInstagram, enlace:'https://www.instagram.com/nexdigital.dev'},
+        {follow: 'Facebook', icon: FaFacebook, enlace:''},
+        {follow: 'WhatsApp', icon: FaWhatsapp, enlace:''}
     ]
     return (
         <div className="bg-[#060D17] text-[#EAE9E9]/95 px-10 font-host py-5">
@@ -33,13 +33,15 @@ function Bottom() {
                     </div>
                     <div className='flex flex-col gap-1 cursor-pointer '>
                         {planes.map((plan) => (
-                            <div
+                            <a href="/planes">
+                                <div
                                 key={plan}
                                 className="flex cursor-pointer justify-between gap-2 rounded-md px-2 py-1 transition-all duration-300 hover:scale-[1.03] hover:bg-[#0465F1]/15"
                             >
                                 <h2>{plan}</h2>
                                 <ChevronRight className="text-[#0465F1]" />
                             </div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -62,9 +64,9 @@ function Bottom() {
                 <div className='flex flex-col'>
                         <h1 className='font-bold text-2xl'>Siguenos</h1>
                         <div className="bg-[#0465F1] h-[1px] w-15 rounded mb-2 flex "></div>
-                        {follow.map(({ follow, icon: Icon }) => (
+                        {follow.map(({ follow, icon: Icon, enlace }) => (
                             <div key={follow} className='flex gap-2 cursor-pointer hover:scale-103 transition-all duration-300'>
-                                <a href="" className='hover:bg-[#0465F1]/15 flex flex-row  gap-2 py-1 rounded-md px-2'>
+                                <a href={enlace} className='hover:bg-[#0465F1]/15 flex flex-row  gap-2 py-1 rounded-md px-2'>
                                     <Icon
                                     className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
                                         }`}

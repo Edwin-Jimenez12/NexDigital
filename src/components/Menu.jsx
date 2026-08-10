@@ -5,10 +5,11 @@ import { FaWhatsapp } from 'react-icons/fa6'
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
     const menuItems = [
-        { nombre: "Inicio", enlace: "#inicio", },
-        { nombre: "Conocenos", enlace: "#nosotros", },
+        { nombre: "Inicio", enlace: "/#inicio", },
+        { nombre: "Conocenos", enlace: "/#conocenos", },
         { nombre: "Planes", enlace: "/planes", },
-        { nombre: "Proyectos", enlace: "#proyectos", },
+        { nombre: "Servicios", enlace: "/#servicios"},
+        { nombre: "Proyectos", enlace: "/#proyectos", },
     ];
     return (
         <header className="absolute left-0 top-0 z-50 w-full">
@@ -41,7 +42,8 @@ function Menu() {
                     aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={isOpen}
                     onClick={() => setIsOpen((estadoActual) => !estadoActual)}
-                    className="relative h-12 w-12 text-[#EAE9E9] md:hidden"
+                    className="relative h-12 w-12 te
+                    xt-[#EAE9E9] md:hidden"
                 >
                     <MenuIcon
                         className={`absolute inset-0 h-12 w-12 transition-all duration-300 ${isOpen ? "-rotate-90 opacity-0" : "rotate-0 opacity-100"

@@ -2,7 +2,7 @@ import { Goal, CodeXml, User, Pencil } from "lucide-react"
 
 function UsPart1 (){
     return (
-        <div className="bg-[#060D17] px-10 flex flex-col gap-10 py-10">
+        <div id="conocenos" className="bg-[#060D17] px-10 flex flex-col gap-10 py-10 scroll-mt-[125px]">
             <div className="text-center text-[#EAE9E9] flex flex-col gap-3">
                 <h1 className="font-host font-bold text-2xl">¿Por qué elegir NEX DIGITAL?</h1>
                 <p className="font-inter text-[#D1D5DB]">Combinamos diseño, tecnología y estrategia para crear sitios 

@@ -29,14 +29,18 @@ function Start() {
                     </p>
 
                     <div className="flex flex-col items-start gap-3 font-host md:flex-row md:gap-5">
-                        <button className="flex cursor-pointer items-center gap-1 rounded-lg bg-[#0465F1] px-4 py-4 text-[#EEEEEE]">
-                            Ver planes y precios
-                            <ArrowRight className="h-5 w-auto" />
-                        </button>
+                        <a href="/planes">
+                            <button className="flex cursor-pointer items-center gap-1 rounded-lg bg-[#0465F1] px-4 py-4 text-[#EEEEEE]">
+                                Ver planes y precios
+                                <ArrowRight className="h-5 w-auto" />
+                            </button>
+                        </a>
 
-                        <button className="rounded-lg border-2 border-[#EAE9E9] px-4 py-4 text-[#EEEEEE]">
-                            Ver proyectos
-                        </button>
+                        <a href="/#proyectos">
+                            <button className="rounded-lg border-2 border-[#EAE9E9] px-4 py-4 text-[#EEEEEE] cursor-pointer">
+                                Ver proyectos
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -49,7 +53,7 @@ function Start() {
                 </h1>
 
                 <div className="flex gap-10 pr-5">
-                    <a href="https://filldgap.com/">
+                    <a href="https://filldgap.com/" target="_blank">
                         <img
                             src="/images/FillDGap/fillDGapLogo.svg"
                             alt="FILL D GAP"
@@ -57,7 +61,7 @@ function Start() {
                         />
                     </a>
 
-                    <a href="https://panama-viajero.pages.dev/">
+                    <a href="https://panama-viajero.pages.dev/" target="_blank">
                         <img
                             src="/images/Panama-viajero/LogoRectangular.svg"
                             alt="Panamá Viajero"

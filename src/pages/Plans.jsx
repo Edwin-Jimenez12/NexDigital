@@ -23,7 +23,7 @@ function Plans() {
           <PlanSections />
         </div>
       </section>
-      <div className="flex items-stretch justify-between gap-2 p-10">
+      <div className="flex flex-col items-stretch gap-5 p-5 md:flex-row md:justify-between md:gap-2 md:p-10">
         <Launch/>
         <Start/>
         <Growth/>

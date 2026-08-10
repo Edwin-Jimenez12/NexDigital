@@ -9,17 +9,15 @@ function Home() {
   return (
     <main className="min-h-screen bg-black">
       {/* Hero con fondo */}
-      <section
-        className="relative min-h-dvh bg-cover bg-center"
+      <section id="inicio"
+        className="relative min-h-dvh bg-cover bg-center scroll-mt-[72px]"
         style={{
           backgroundImage: "url('/fondoInicio.png')",
         }}
       >
         <Menu />
-
         <div className="relative min-h-dvh">
           <Start />
-
           {/* Imagen Laptop */}
           <img
             src="/laptop.svg"

@@ -1,7 +1,7 @@
 import { MonitorCheck, PencilRuler, Rocket, Cog, LayoutTemplate  } from 'lucide-react'
 function UsPart2() {
     return (
-        <div className="bg-[#EAE9E9] px-10 flex flex-col gap-10 py-10">
+        <div id='servicios' className="bg-[#EAE9E9] px-10 flex flex-col gap-10 py-10 scroll-mt-[25px]">
             <div className="text-center text-[#EAE9E9] flex flex-col gap-1">
                 <h1 className="font-host font-bold text-lg text-[#0465F1]">Servicios</h1>
                 <h1 className="font-host font-bold text-2xl text-[#000000]/90">Soluciones web para impulsar tu presencia digital</h1>
@@ -68,10 +68,11 @@ function UsPart2() {
                 </div>
                 </div>
                 <div className='md:pr-10 hover:scale-105 transition duration-300 '>
-                    <button className="text-inter bg-[#0465F1] cursor-pointer text-[#EAE9E9] hover:text-[#FFFFFF] transition duration-300  py-2 px-6 rounded-md items-center  text-lg"
-                >
-                    Ver planes y precios
-                </button>
+                    <a href="/planes">
+                        <button className="text-inter bg-[#0465F1] cursor-pointer text-[#EAE9E9] hover:text-[#FFFFFF] transition duration-300  py-2 px-6 rounded-md items-center  text-lg">
+                            Ver planes y precios
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
