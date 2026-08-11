@@ -1,4 +1,5 @@
 import { CircleCheckBig, Puzzle } from "lucide-react";
+import { createWhatsAppLink, WHATSAPP_MESSAGES } from "../../config/whatsapp";
 
 function Personalized() {
     const funcionalidades = [
@@ -49,9 +50,14 @@ function Personalized() {
                     <div className="shrink-0">
 
 
-                        <div className="rounded-md bg-[#111111] px-5 py-3 font-inter text-xs font-semibold text-[#EAE9E9]">
+                        <a
+                            href={createWhatsAppLink(WHATSAPP_MESSAGES.custom)}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block rounded-md bg-[#111111] px-5 py-3 font-inter text-xs font-semibold text-[#EAE9E9] transition-colors duration-300 hover:bg-[#0465F1]"
+                        >
                             Cotización personalizada
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>

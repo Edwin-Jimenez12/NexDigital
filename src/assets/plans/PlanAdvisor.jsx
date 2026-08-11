@@ -1,5 +1,6 @@
 import { CalendarPlus2 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa6";
+import { createWhatsAppLink, WHATSAPP_MESSAGES } from "../../config/whatsapp";
 
 function PlanAdvisor() {
     return (
@@ -21,13 +22,15 @@ function PlanAdvisor() {
                     </div>
                 </div>
 
-                <button
-                    type="button"
+                <a
+                    href={createWhatsAppLink(WHATSAPP_MESSAGES.advisor)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex shrink-0 cursor-pointer items-center justify-center gap-2 rounded-md bg-[#0465F1] px-8 py-3 font-host text-sm font-semibold text-[#EAE9E9] transition-colors duration-300 hover:bg-[#0354c9]"
                 >
                     <span>Hablar con un asesor</span>
                     <FaWhatsapp className="h-4 w-4" />
-                </button>
+                </a>
             </div>
         </section>
     );

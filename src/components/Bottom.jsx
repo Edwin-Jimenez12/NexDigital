@@ -1,9 +1,10 @@
 import { ChevronRight, MapPin, Clock5, Mail } from 'lucide-react'
 import { FaWhatsapp, FaInstagram, FaFacebook} from 'react-icons/fa6'
+import { createWhatsAppLink, WHATSAPP_DISPLAY, WHATSAPP_MESSAGES } from '../config/whatsapp'
 function Bottom() {
     const planes = ['Plan lunch', 'Plan Start', 'Plan Growth', 'Plan Bussiness', 'Plan Personalizado']
     const contactos = [
-        { contacto: '+507 6509-4159', icon: FaWhatsapp },
+        { contacto: WHATSAPP_DISPLAY, icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general) },
         { contacto: 'nexdigitaldev@gmail.com', icon: Mail },
         { contacto: 'Ciudad de Panamá, Panamá', icon: MapPin },
         { contacto: 'Lun-Vie: 9:00 am-6:00 pm.', icon: Clock5 }
@@ -11,7 +12,7 @@ function Bottom() {
     const follow = [
         {follow: 'Instagram', icon: FaInstagram, enlace:'https://www.instagram.com/nexdigital.dev'},
         {follow: 'Facebook', icon: FaFacebook, enlace:''},
-        {follow: 'WhatsApp', icon: FaWhatsapp, enlace:''}
+        {follow: 'WhatsApp', icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general)}
     ]
     return (
         <div className="bg-[#060D17] text-[#EAE9E9]/95 px-10 font-host py-5">
@@ -33,9 +34,8 @@ function Bottom() {
                     </div>
                     <div className='flex flex-col gap-1 cursor-pointer '>
                         {planes.map((plan) => (
-                            <a href="/planes">
+                            <a key={plan} href="/planes">
                                 <div
-                                key={plan}
                                 className="flex cursor-pointer justify-between gap-2 rounded-md px-2 py-1 transition-all duration-300 hover:scale-[1.03] hover:bg-[#0465F1]/15"
                             >
                                 <h2>{plan}</h2>
@@ -50,13 +50,19 @@ function Bottom() {
                     <div>
                         <h1 className='font-bold text-2xl'>Contacto</h1>
                         <div className="bg-[#0465F1] h-[1px] w-15 rounded md:flex mb-3"></div>
-                        {contactos.map(({ contacto, icon: Icon }) => (
-                            <div key={contacto} className='flex gap-2 py-1 pl-2'>
+                        {contactos.map(({ contacto, icon: Icon, enlace }) => (
+                            <a
+                                key={contacto}
+                                href={enlace}
+                                target={enlace ? "_blank" : undefined}
+                                rel={enlace ? "noopener noreferrer" : undefined}
+                                className={`flex gap-2 py-1 pl-2 ${enlace ? "cursor-pointer hover:text-[#0465F1]" : "pointer-events-none"}`}
+                            >
                                 <Icon
                                     className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
                                         }`}
                                 /><span>{contacto}</span>
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -66,7 +72,12 @@ function Bottom() {
                         <div className="bg-[#0465F1] h-[1px] w-15 rounded mb-2 flex "></div>
                         {follow.map(({ follow, icon: Icon, enlace }) => (
                             <div key={follow} className='flex gap-2 cursor-pointer hover:scale-103 transition-all duration-300'>
-                                <a href={enlace} className='hover:bg-[#0465F1]/15 flex flex-row  gap-2 py-1 rounded-md px-2'>
+                                <a
+                                    href={enlace}
+                                    target={enlace ? "_blank" : undefined}
+                                    rel={enlace ? "noopener noreferrer" : undefined}
+                                    className='hover:bg-[#0465F1]/15 flex flex-row gap-2 py-1 rounded-md px-2'
+                                >
                                     <Icon
                                     className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
                                         }`}

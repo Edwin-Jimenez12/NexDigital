@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Menu as MenuIcon, X } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa6'
+import { createWhatsAppLink, WHATSAPP_MESSAGES } from '../config/whatsapp'
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
@@ -29,12 +30,16 @@ function Menu() {
                     ))}
                 </div>
                 {/* Contacto */}
-                <button className="bg-[#0465F1] cursor-pointer text-[#EAE9E9] py-3 px-6 rounded-md 
+                <a
+                    href={createWhatsAppLink(WHATSAPP_MESSAGES.general)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-[#0465F1] cursor-pointer text-[#EAE9E9] py-3 px-6 rounded-md 
                 hidden md:flex gap-2 items-center hover:bg-transparent transition duration-300 
                 border-1 border-[#0465F1] hover:border-[#EAE9E9] text-lg font-host"
                 >
                     <span className='font-host font-bold'>Hablemos</span> <FaWhatsapp className="h-6 w-auto  text-[#EAE9E9]" />
-                </button>
+                </a>
                 
                 {/* Boton movil */}
                 <button
@@ -71,10 +76,15 @@ function Menu() {
                         <div className="w-full h-[3px] bg-[#0465F1] rounded-full scale-x-0 group-hover:scale-x-100 transition duration-300"></div>
                     </div>
                 ))}
-                <button className="flex items-center justify-center gap-2 rounded-md bg-[#0465F1] px-4 py-2 mt-10">
+                <a
+                    href={createWhatsAppLink(WHATSAPP_MESSAGES.general)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 rounded-md bg-[#0465F1] px-4 py-2 mt-10"
+                >
                     <span className='font-host font-bold text-[#EAE9E9]'>Hablemos</span>
                     <FaWhatsapp className="h-6 w-auto text-[#EAE9E9]" />
-                </button>
+                </a>
             </div>
         </header>
     )
