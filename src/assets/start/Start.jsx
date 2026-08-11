@@ -7,7 +7,7 @@ function Start() {
             <div></div>
 
             {/* Contenido principal */}
-            <div className="flex justify-between z-10">
+            <div className="flex items-center z-10">
                 <div className="flex flex-col gap-3 md:gap-5">
                     <div>
                         <h3 className="text-sm text-[#0465F1] md:text-base">
@@ -42,32 +42,6 @@ function Start() {
                             </button>
                         </a>
                     </div>
-                </div>
-            </div>
-
-            {/* Empresas */}
-            <div className="z-30 gap-15 py-4 font-bold text-[#EAE9E9] md:flex md:py-7 md:text-xl lg:text-2xl">
-                <h1 className="mb-3 opacity-90">
-                    Empresas que <br />
-                    confían en nosotros
-                </h1>
-
-                <div className="flex gap-10 pr-5">
-                    <a href="https://filldgap.com/" target="_blank">
-                        <img
-                            src="/images/FillDGap/fillDGapLogo.svg"
-                            alt="FILL D GAP"
-                            className="h-20 w-auto opacity-90 transition-all duration-300 hover:scale-105"
-                        />
-                    </a>
-
-                    <a href="https://panama-viajero.pages.dev/" target="_blank">
-                        <img
-                            src="/images/Panama-viajero/LogoRectangular.svg"
-                            alt="Panamá Viajero"
-                            className="h-15 w-auto opacity-80 transition-all duration-300 hover:scale-105"
-                        />
-                    </a>
                 </div>
             </div>
         </div>

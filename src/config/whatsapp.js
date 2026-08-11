@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "50765094159";
+export const WHATSAPP_NUMBER = "50765591976";
 
 const numeroLocal = WHATSAPP_NUMBER.slice(3);
 

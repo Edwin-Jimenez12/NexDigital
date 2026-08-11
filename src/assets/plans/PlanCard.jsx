@@ -22,9 +22,13 @@ function PlanCard({ icon: Icon, nombre, descripcion, precio, beneficios, entrega
 
                         <p className="font-inter text-sm text-[#111111]">{descripcion}</p>
 
-                        <div className="mt-4 flex items-end gap-1">
+                        <div>
+                            <div className="mt-4 flex items-end gap-1">
                             <span className="text-lg font-bold text-[#111111]">USD</span>
                             <span className="text-2xl font-bold text-[#0465F1]">{precio}</span>
+                        </div>
+                        <p className="font-inter text-sm text-[#111111]/90">Pago unico</p>
+                        <p className="font-inter text-xs text-[#111111]/90">Abono de 50% y 50% al finalizar el proyecto.</p>
                         </div>
                     </div>
 

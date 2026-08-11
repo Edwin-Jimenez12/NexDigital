@@ -4,6 +4,7 @@ import UsPart1 from "../assets/us/UsPart1";
 import UsPart2 from "../assets/us/UsPart2";
 import Bottom from "../components/Bottom";
 import Proyects from "../assets/proyects/Proyects";
+import Companies from '../assets/start/Companies'
 
 function Home() {
   return (
@@ -37,8 +38,8 @@ function Home() {
           />
         </div>
       </section>
-
       {/* Resto de la página */}
+      <Companies/>
       <UsPart1 />
       <Proyects />
       <UsPart2 />
