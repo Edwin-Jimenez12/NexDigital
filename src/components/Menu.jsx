@@ -1,10 +1,23 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Menu as MenuIcon, X } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa6'
 import { createWhatsAppLink, WHATSAPP_MESSAGES } from '../config/whatsapp'
 
 function Menu() {
     const [isOpen, setIsOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20)
+        }
+
+        handleScroll()
+        window.addEventListener('scroll', handleScroll, { passive: true })
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     const menuItems = [
         { nombre: "Inicio", enlace: "/#inicio", },
         { nombre: "Conocenos", enlace: "/#conocenos", },
@@ -13,9 +26,13 @@ function Menu() {
         { nombre: "Proyectos", enlace: "/#proyectos", },
     ];
     return (
-        <header className="absolute left-0 top-0 z-50 w-full">
+        <header className="fixed left-0 top-0 z-50 w-full">
             {/* Barra principal */}
-            <div className="flex items-center justify-between bg-[#060D17] p-3 text-[#EAE9E9]  md:bg-transparent md:backdrop-blur-none">
+            <div className={`flex items-center justify-between bg-[#060D17] p-3 text-[#EAE9E9] transition-all duration-300 ${
+                isScrolled
+                    ? "md:bg-[#060D17]/90 md:shadow-lg md:backdrop-blur-md"
+                    : "md:bg-transparent md:shadow-none md:backdrop-blur-none"
+            }`}>
                 {/* Logos */}
                 <img src="/logo.svg" alt="Logo principal" className='h-15 w-auto hidden md:flex' />
                 <img src="/n.svg" alt="Logo principal" className='h-10 w-auto md:hidden' />
@@ -47,8 +64,7 @@ function Menu() {
                     aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={isOpen}
                     onClick={() => setIsOpen((estadoActual) => !estadoActual)}
-                    className="relative h-12 w-12 te
-                    xt-[#EAE9E9] md:hidden"
+                    className="relative h-12 w-12 text-[#EAE9E9] md:hidden"
                 >
                     <MenuIcon
                         className={`absolute inset-0 h-12 w-12 transition-all duration-300 ${isOpen ? "-rotate-90 opacity-0" : "rotate-0 opacity-100"
