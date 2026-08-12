@@ -3,11 +3,8 @@ import { ArrowRight } from "lucide-react";
 function Start() {
     return (
         <div className="flex min-h-dvh flex-col justify-between pl-5 pt-[72px] md:pt-0">
-            {/* Espacio superior */}
-            <div></div>
-
             {/* Contenido principal */}
-            <div className="flex items-center z-10">
+            <div className="flex flex-1 items-center  z-10">
                 <div className="flex flex-col gap-3 md:gap-5">
                     <div>
                         <h3 className="text-sm text-[#0465F1] md:text-base">

@@ -1,12 +1,18 @@
 function Companies() {
     return (
-        <div className="flex flex-col items-center px-5 bg-[#EAE9E9]/95 z-30 py-4 font-bold text-[#EAE9E9] md:flex md:py-7 md:text-xl lg:text-2xl gap-5">
-            <h1 className="text-center text-[#111111] mb-3 opacity-90 text-2xl">
-                Empresas que <br />
+        <div className="flex flex-col items-center px-5 bg-[#EAE9E9]/95 z-30 py-4 
+        text-[#EAE9E9] md:flex md:py-7 md:text-xl lg:text-2xl gap-10 font-host">
+            <div>
+                <h1 className="text-center text-[#111111] mb-1 opacity-90 text-2xl font-bold">
+                Empresas que
                 confían en nosotros
             </h1>
+            <p className="text-[#111111]/75 max-w-xl text-center text-sm text-inter">Trabajamos junto a marcas 
+            que apuestan por el diseño, la estrategia y la innovación para crecer en digital.
+            </p>
+            </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-between gap-25 pr-5">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-10 pr-5">
                 <img
                     src="/images/FillDGap/fillDGapLogo.svg"
                     alt="FILL D GAP"

@@ -49,14 +49,15 @@ function Bottom() {
                 <div className='flex flex-col gap-4'>
                     <div>
                         <h1 className='font-bold text-2xl'>Contacto</h1>
-                        <div className="bg-[#0465F1] h-[1px] w-15 rounded md:flex mb-3"></div>
+                        <div className="bg-[#0465F1] h-[1px] w-15 rounded md:flex mb-3 "></div>
                         {contactos.map(({ contacto, icon: Icon, enlace }) => (
                             <a
                                 key={contacto}
                                 href={enlace}
                                 target={enlace ? "_blank" : undefined}
                                 rel={enlace ? "noopener noreferrer" : undefined}
-                                className={`flex gap-2 py-1 pl-2 ${enlace ? "cursor-pointer hover:text-[#0465F1]" : "pointer-events-none"}`}
+                                className={`flex gap-2 py-1 pl-2  ${enlace ? "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15 " 
+                                    : "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15"}`}
                             >
                                 <Icon
                                     className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
