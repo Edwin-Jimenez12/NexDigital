@@ -5,7 +5,7 @@ function Bottom() {
     const planes = ['Plan lunch', 'Plan Start', 'Plan Growth', 'Plan Bussiness', 'Plan Personalizado']
     const contactos = [
         { contacto: WHATSAPP_DISPLAY, icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general) },
-        { contacto: 'nexdigitaldev@gmail.com', icon: Mail },
+        { contacto: 'nexdigitaldev@gmail.com', icon: Mail, enlace:""  },
         { contacto: 'Ciudad de Panamá, Panamá', icon: MapPin },
         { contacto: 'Lun-Vie: 9:00 am-6:00 pm.', icon: Clock5 }
     ]
