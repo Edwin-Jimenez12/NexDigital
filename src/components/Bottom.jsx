@@ -107,7 +107,12 @@ function Bottom() {
                             Términos y condiciones
                         </a>
                         <div className="bg-[#EAE9E9] h-6 w-[1px] rounded hidden md:flex"></div>
-                        <span>Politica de privacidad</span>
+                        <a
+                            href="/politica-de-privacidad"
+                            className="transition-colors duration-300 hover:text-[#0465F1]"
+                        >
+                            Política de privacidad
+                        </a>
                     </p>
                     <div className="flex gap-2 items-center">
                         <div className="bg-[#EAE9E9] rounded-sm px-2 py-2">
