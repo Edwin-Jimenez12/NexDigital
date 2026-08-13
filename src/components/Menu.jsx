@@ -34,8 +34,8 @@ function Menu() {
                     : "md:bg-transparent md:shadow-none md:backdrop-blur-none"
             }`}>
                 {/* Logos */}
-                <img src="/logo.svg" alt="Logo principal" className='h-15 w-auto hidden md:flex' />
-                <img src="/n.svg" alt="Logo principal" className='h-10 w-auto md:hidden' />
+                <a href="https://nexdigital.online/"><img src="/logo.svg" alt="Logo principal" className='h-15 w-auto hidden md:flex' /></a>
+                <a href="https://nexdigital.online/"><img src="/n.svg" alt="Logo principal" className='h-10 w-auto md:hidden' /></a>
                 {/* Menu escritorio */}
                 <div className="hidden md:flex gap-4 text-xl">
                     {menuItems.map((item) => (
