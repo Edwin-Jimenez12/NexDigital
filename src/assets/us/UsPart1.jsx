@@ -2,13 +2,14 @@ import { Goal, CodeXml, User, Pencil } from "lucide-react"
 
 function UsPart1 (){
     return (
-        <div id="conocenos" className="bg-[#060D17] px-10 flex flex-col gap-10 py-10 scroll-mt-[125px]">
+        <div id="conocenos" className="bg-[#060D17] px-10 flex flex-col gap-10 py-10 scroll-mt-[150px]">
             <div className="text-center text-[#EAE9E9] flex flex-col gap-3">
                 <h1 className="font-host font-bold text-2xl">¿Por qué elegir NEX DIGITAL?</h1>
                 <p className="font-inter text-[#D1D5DB]">Combinamos diseño, tecnología y estrategia para crear sitios 
                     web que no solo se ven bien, <br /> si no que también generan 
                     resultados
                 </p>
+                
             </div>
             {/* Cuadros */}
             <div className="text-[#EEEEEE] flex flex-col md:flex-row md:justify-between items-center gap-10 pb-5 items-stretch">

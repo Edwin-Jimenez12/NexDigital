@@ -4,10 +4,10 @@ import PlanCard from "./PlanCard";
 function Bussiness() {
     const beneficios = [
         "Todo lo del plan Growth.",
-        "1 sitio web con hasta 10 páginas.",
+        "1 sitio web de hasta 10 páginas.",
         "Hasta 4 formularios.",
         "Mejor rendimiento y velocidad de carga.",
-        "Hasta 4 rondas de cambios después de la entrega.",
+        "Hasta 4 rondas de cambios después de entrega.",
     ];
 
     return (

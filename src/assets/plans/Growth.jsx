@@ -4,12 +4,12 @@ import PlanCard from "./PlanCard";
 function Growth() {
     const beneficios = [
         "Todo lo del plan Start.",
-        "1 sitio web con hasta 7 páginas.",
+        "1 sitio web de hasta 7 páginas.",
         "Efectos visuales.",
         "Sección de preguntas frecuentes.",
         "Hasta 2 formularios de contacto.",
         "Optimización de velocidad.",
-        "Hasta 3 rondas de cambios después de la entrega.",
+        "Hasta 3 rondas de cambios después de entrega.",
     ];
 
     return (

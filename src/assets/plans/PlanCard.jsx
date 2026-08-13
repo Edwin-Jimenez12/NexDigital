@@ -52,8 +52,8 @@ function PlanCard({ icon: Icon, nombre, descripcion, precio, beneficios, entrega
 
                             <div className="flex flex-col gap-3">
                                 {beneficios.map((beneficio) => (
-                                    <div key={beneficio} className="flex items-start gap-2">
-                                        <CircleCheckBig className="mt-[2px] h-5 w-5 shrink-0 text-[#0465F1]" />
+                                    <div key={beneficio} className="flex items-center gap-2">
+                                        <CircleCheckBig className="h-5 w-5 shrink-0 text-[#0465F1]" />
                                         <p className="font-inter text-xs text-[#111111]">{beneficio}</p>
                                     </div>
                                 ))}

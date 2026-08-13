@@ -4,10 +4,10 @@ import PlanCard from "./PlanCard";
 function Start() {
     const beneficios = [
         "Todo lo del plan Launch.",
-        "1 sitio web con hasta 4 páginas.",
+        "1 sitio web de hasta 4 páginas.",
         "Mapa de ubicación.",
         "Galería de imágenes.",
-        "Hasta 2 rondas de cambios después de la entrega.",
+        "Hasta 2 rondas de cambios después de entrega.",
     ];
 
     return (

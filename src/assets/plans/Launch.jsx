@@ -3,13 +3,13 @@ import PlanCard from "./PlanCard";
 
 function Launch() {
     const beneficios = [
-        "1 sitio web con 1 página.",
+        "1 sitio web de 2 páginas.",
         "Adaptado para celulares, tablets y computadoras.",
         "Enlace a WhatsApp.",
         "Formulario de contacto.",
         "Enlaces a redes sociales.",
         "Publicación del sitio web.",
-        "1 ronda de cambios después de la entrega.",
+        "1 ronda de cambios después de entrega.",
     ];
 
     return (

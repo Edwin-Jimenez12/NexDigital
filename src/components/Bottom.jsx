@@ -1,12 +1,20 @@
 import { ChevronRight, MapPin, Clock5, Mail } from 'lucide-react'
 import { FaWhatsapp, FaInstagram, FaFacebook} from 'react-icons/fa6'
 import { createWhatsAppLink, WHATSAPP_DISPLAY, WHATSAPP_MESSAGES } from '../config/whatsapp'
+
+const EMAIL = 'nexdigitaldev@gmail.com'
+const EMAIL_LINK = `mailto:${EMAIL}?subject=${encodeURIComponent(
+    'Consulta desde la página de Nex Digital'
+)}&body=${encodeURIComponent(
+    'Hola, visité la página web de Nex Digital y quisiera recibir información sobre sus servicios.'
+)}`
+
 function Bottom() {
     const planes = ['Plan lunch', 'Plan Start', 'Plan Growth', 'Plan Bussiness', 'Plan Personalizado']
     const contactos = [
         { contacto: WHATSAPP_DISPLAY, icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general) },
-        { contacto: 'nexdigitaldev@gmail.com', icon: Mail, enlace:""  },
-        { contacto: 'Ciudad de Panamá, Panamá', icon: MapPin },
+        { contacto: EMAIL, icon: Mail, enlace: EMAIL_LINK },
+        { contacto: 'Ciudad de Panamá, Panamá', icon: MapPin, enlace:"https://maps.app.goo.gl/f2dmNyEu5aKRCsqD8"},
         { contacto: 'Lun-Vie: 9:00 am-6:00 pm.', icon: Clock5 }
     ]
     const follow = [
@@ -54,8 +62,8 @@ function Bottom() {
                             <a
                                 key={contacto}
                                 href={enlace}
-                                target={enlace ? "_blank" : undefined}
-                                rel={enlace ? "noopener noreferrer" : undefined}
+                                target={enlace?.startsWith('http') ? "_blank" : undefined}
+                                rel={enlace?.startsWith('http') ? "noopener noreferrer" : undefined}
                                 className={`flex gap-2 py-1 pl-2  ${enlace ? "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15 " 
                                     : "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15"}`}
                             >
@@ -92,7 +100,12 @@ function Bottom() {
                 <p className="hidden md:flex">© 2026 Nex Digital. Todos los derecho reservados.</p>
                 <div className="flex flex-col md:flex-row items-center gap-5">
                     <p className="flex flex-col md:flex-row md:gap-2 items-center">
-                        <span>Terminos y condiciones</span>
+                        <a
+                            href="/terminos-y-condiciones"
+                            className="transition-colors duration-300 hover:text-[#0465F1]"
+                        >
+                            Términos y condiciones
+                        </a>
                         <div className="bg-[#EAE9E9] h-6 w-[1px] rounded hidden md:flex"></div>
                         <span>Politica de privacidad</span>
                     </p>
