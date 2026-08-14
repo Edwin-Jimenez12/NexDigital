@@ -10,7 +10,7 @@ const EMAIL_LINK = `mailto:${EMAIL}?subject=${encodeURIComponent(
 )}`
 
 function Bottom() {
-    const planes = ['Plan lunch', 'Plan Start', 'Plan Growth', 'Plan Bussiness', 'Plan Personalizado']
+    const planes = ['Plan Launch', 'Plan Start', 'Plan Growth', 'Plan Business', 'Plan Personalizado']
     const contactos = [
         { contacto: WHATSAPP_DISPLAY, icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general) },
         { contacto: EMAIL, icon: Mail, enlace: EMAIL_LINK },

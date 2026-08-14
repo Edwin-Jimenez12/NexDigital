@@ -16,7 +16,7 @@ import {
 
 function Comparison() {
     const caracteristicas = [
-        {nombre: "Sitio web", icono: Monitor, launch: "1 página", start: "Hasta 4 páginas", growth: "Hasta 7 páginas", business: "Hasta 10 páginas",},
+        {nombre: "Sitio web", icono: Monitor, launch: "Hasta 2 páginas", start: "Hasta 4 páginas", growth: "Hasta 7 páginas", business: "Hasta 10 páginas",},
         {nombre: "WhatsApp", icono: MessageCircle, launch: true, start: true, growth: true, business: true,},
         {nombre: "Formulario de contacto", icono: Mail, launch: "1", start: "1", growth: "Hasta 2", business: "Hasta 4",},
         {nombre: "Redes sociales", icono: Share2, launch: true, start: true, growth: true, business: true,},
