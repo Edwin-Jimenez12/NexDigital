@@ -28,16 +28,20 @@ function Menu() {
     return (
         <header className="fixed left-0 top-0 z-50 w-full">
             {/* Barra principal */}
-            <div className={`flex items-center justify-between bg-[#060D17] p-3 text-[#EAE9E9] transition-all duration-300 ${
+            <div className={`grid grid-cols-[1fr_auto_1fr] items-center bg-[#060D17] p-3 text-[#EAE9E9] transition-all duration-300 ${
                 isScrolled
                     ? "md:bg-[#060D17]/90 md:shadow-lg md:backdrop-blur-md"
                     : "md:bg-transparent md:shadow-none md:backdrop-blur-none"
-            }`}>
+                }`}>
                 {/* Logos */}
-                <a href="https://nexdigital.online/"><img src="/logo.svg" alt="Logo principal" className='h-15 w-auto hidden md:flex' /></a>
-                <a href="https://nexdigital.online/"><img src="/n.svg" alt="Logo principal" className='h-10 w-auto md:hidden' /></a>
+                <a href="https://nexdigital.online/" className="hidden md:col-start-1 md:row-start-1 md:block md:justify-self-start">
+                    <img src="/logo.svg" alt="Logo principal" className="h-15 w-auto" />
+                </a>
+                <a href="https://nexdigital.online/" className="col-start-2 row-start-1 justify-self-center md:hidden">
+                    <img src="/n.svg" alt="Logo principal" className="h-10 w-auto" />
+                </a>
                 {/* Menu escritorio */}
-                <div className="hidden md:flex gap-4 text-xl">
+                <nav className="hidden gap-3 text-base md:col-start-2 md:row-start-1 md:flex md:justify-self-center lg:gap-4 lg:text-xl">
                     {menuItems.map((item) => (
                         <div key={item.nombre} className="group flex flex-col items-center text-[#EAE9E9]">
                             <a href={item.enlace} className="cursor-pointer duration-300 
@@ -45,14 +49,14 @@ function Menu() {
                             <div className="w-full h-[3px] bg-[#0465F1] rounded-full scale-x-0 group-hover:scale-x-100 transition duration-300"></div>
                         </div>
                     ))}
-                </div>
+                </nav>
                 {/* Contacto */}
                 <a
                     href={createWhatsAppLink(WHATSAPP_MESSAGES.general)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#0465F1] cursor-pointer text-[#EAE9E9] py-3 px-6 rounded-md 
-                hidden md:flex gap-2 items-center hover:bg-transparent transition duration-300 
+                hidden md:col-start-3 md:row-start-1 md:flex md:justify-self-end gap-2 items-center hover:bg-transparent transition duration-300 
                 border-1 border-[#0465F1] hover:border-[#EAE9E9] text-lg font-host"
                 >
                     <span className='font-host font-bold'>Hablemos</span> <FaWhatsapp className="h-6 w-auto  text-[#EAE9E9]" />
@@ -64,7 +68,7 @@ function Menu() {
                     aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
                     aria-expanded={isOpen}
                     onClick={() => setIsOpen((estadoActual) => !estadoActual)}
-                    className="relative h-12 w-12 text-[#EAE9E9] md:hidden"
+                    className="relative col-start-3 row-start-1 h-12 w-12 justify-self-end text-[#EAE9E9] md:hidden"
                 >
                     <MenuIcon
                         className={`absolute inset-0 h-12 w-12 transition-all duration-300 ${isOpen ? "-rotate-90 opacity-0" : "rotate-0 opacity-100"
