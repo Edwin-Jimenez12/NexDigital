@@ -22,16 +22,15 @@ function Menu() {
         { nombre: "Inicio", enlace: "/#inicio", },
         { nombre: "Conocenos", enlace: "/#conocenos", },
         { nombre: "Planes", enlace: "/planes", },
-        { nombre: "Servicios", enlace: "/#servicios"},
+        { nombre: "Servicios", enlace: "/#servicios" },
         { nombre: "Proyectos", enlace: "/#proyectos", },
     ];
     return (
         <header className="fixed left-0 top-0 z-50 w-full">
             {/* Barra principal */}
-            <div className={`grid grid-cols-[1fr_auto_1fr] items-center bg-[#060D17] p-3 text-[#EAE9E9] transition-all duration-300 ${
-                isScrolled
-                    ? "md:bg-[#060D17]/90 md:shadow-lg md:backdrop-blur-md"
-                    : "md:bg-transparent md:shadow-none md:backdrop-blur-none"
+            <div className={`flex  justify-between items-center bg-[#060D17] p-3 text-[#EAE9E9] transition-all duration-300 ${isScrolled
+                ? "md:bg-[#060D17]/90 md:shadow-lg md:backdrop-blur-md"
+                : "md:bg-transparent md:shadow-none md:backdrop-blur-none"
                 }`}>
                 {/* Logos */}
                 <a href="https://nexdigital.online/" className="hidden md:col-start-1 md:row-start-1 md:block md:justify-self-start">
@@ -61,7 +60,7 @@ function Menu() {
                 >
                     <span className='font-host font-bold'>Hablemos</span> <FaWhatsapp className="h-6 w-auto  text-[#EAE9E9]" />
                 </a>
-                
+
                 {/* Boton movil */}
                 <button
                     type="button"
