@@ -111,8 +111,7 @@ function TermsAndConditions() {
 
           <TermSection id="identificacion" number="01" title="Identificación y aceptación" icon={FileCheck2}>
             <p>
-              Nex Digital es un nombre comercial operado por Edwin Anel Jiménez
-              García, persona natural ubicada en la República de Panamá. Estas
+              Nex Digital es un nombre comercial ubicada en la República de Panamá. Estas
               condiciones regulan la contratación de sus servicios de diseño,
               desarrollo, publicación, optimización y mantenimiento web.
             </p>

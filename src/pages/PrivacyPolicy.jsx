@@ -114,10 +114,9 @@ function PrivacyPolicy() {
 
           <PrivacySection id="responsable" number="01" title="Responsable del tratamiento" icon={UserRoundCheck}>
             <p>
-              Nex Digital es un nombre comercial operado por Edwin Anel Jiménez
-              García, persona natural ubicada en la República de Panamá, y es
-              responsable de decidir cómo se utilizan los datos personales recibidos
-              durante las consultas y la prestación de sus servicios.
+              Nex Digital es un nombre comercial ubicada en la República de Panamá. Estas
+              condiciones regulan la contratación de sus servicios de diseño,
+              desarrollo, publicación, optimización y mantenimiento web.
             </p>
             <p>
               Las consultas sobre privacidad y las solicitudes relacionadas con datos
