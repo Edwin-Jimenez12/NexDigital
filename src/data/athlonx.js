@@ -1,4 +1,4 @@
-/* AthlonX: Empresa del grupo Nex Digital */
+/* AthlonX: Plataforma del grupo Nex Digital */
 export const athlonx = {
   name: 'AthlonX',
   motto: 'El rendimiento se construye.',
@@ -7,5 +7,5 @@ export const athlonx = {
   status: 'En funcionamiento',
   // TODO: Reemplazar con la descripción oficial de AthlonX
   description:
-    'AthlonX es una empresa del grupo Nex Digital. Nace con la misma forma de trabajar: Diseño cuidado, tecnología moderna y foco en resultados, ahora llevados a su propia marca.',
+    'AthlonX es una plataforma del grupo Nex Digital. Nace con la misma forma de trabajar: Diseño cuidado, tecnología moderna y foco en resultados, ahora llevados a su propia marca.',
 }
