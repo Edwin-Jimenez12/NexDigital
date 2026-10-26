@@ -90,7 +90,7 @@ function Bottom() {
         <div className="container-x flex flex-wrap items-center justify-between gap-4 py-6 text-xs text-ash/60">
           <p>© {year} Nex Digital. Todos los derechos reservados.</p>
           <a href={athlonx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-athlon">
-            AthlonX es una empresa de Nex Digital <ArrowUpRight aria-hidden="true" className="size-3.5" />
+            AthlonX es una plataforma de Nex Digital <ArrowUpRight aria-hidden="true" className="size-3.5" />
           </a>
           <div className="flex flex-wrap items-center gap-4">
             <a href="/terminos-y-condiciones" className="hover:text-white">Términos y condiciones</a>

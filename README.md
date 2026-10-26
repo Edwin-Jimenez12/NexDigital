@@ -1,6 +1,6 @@
 # Nex Digital
 
-Sitio web de Nex Digital: desarrollo web profesional en Ciudad de Panamá. Incluye AthlonX, empresa del grupo Nex Digital.
+Sitio web de Nex Digital: desarrollo web profesional en Ciudad de Panamá. Incluye AthlonX, plataforma del grupo Nex Digital.
 
 **Stack:** React · Vite · Tailwind CSS v4 · React Router · Lucide React · React Icons
 

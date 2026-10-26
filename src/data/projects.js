@@ -27,7 +27,7 @@ export const projects = [
   {
     slug: 'athlonx',
     name: 'AthlonX',
-    category: 'Empresa del grupo Nex Digital',
+    category: 'Plataforma del grupo Nex Digital',
     url: 'https://athlonx.world/',
     color: '#88DF44',
     statusBar: { bg: '#000000', fg: '#FFFFFF' },

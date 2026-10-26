@@ -3,7 +3,7 @@ import { athlonx } from '../data/athlonx'
 import Button from '../components/Button'
 import { useSpotlight } from '../hooks/useSpotlight'
 
-/* AthlonX como empresa del grupo Nex Digital. */
+/* AthlonX como plataforma del grupo Nex Digital. */
 export default function AthlonX() {
   const onPointerMove = useSpotlight()
   return (
@@ -24,7 +24,7 @@ export default function AthlonX() {
           <div className="relative grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="grid gap-6">
               <div className="flex flex-wrap items-center gap-3">
-                <span className="font-host text-xs font-semibold tracking-[0.22em] text-athlon uppercase">Una empresa de Nex Digital</span>
+                <span className="font-host text-xs font-semibold tracking-[0.22em] text-athlon uppercase">Una plataforma de Nex Digital</span>
                 <span className="inline-flex items-center gap-1.5 rounded-full border border-athlon/30 bg-athlon/10 px-3 py-1 text-xs text-athlon">
                   <Check aria-hidden="true" className="size-3.5" strokeWidth={3} /> {athlonx.status}
                 </span>
