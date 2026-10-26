@@ -23,7 +23,7 @@ function BrandPanel({ name, logo, color, summary }) {
   )
 }
 
-/* Proyectos: selector a la izquierda y vista en Mac + teléfono a la derecha. */
+/* Proyectos: Selector a la izquierda y vista en Mac + teléfono a la derecha. */
 export default function Projects() {
   const [active, setActive] = useState(projects[0].slug)
   const current = projects.find((p) => p.slug === active)

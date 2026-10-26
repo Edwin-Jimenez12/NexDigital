@@ -31,8 +31,8 @@ export const nav = [
 
 export const clients = [
   { name: 'Fill D Gap', logo: '/images/FillDGap/fillDGapLogo.svg' },
-  { name: 'Punto Cero', logo: '/images/PuntoCero/logo.webp' },
-  { name: 'AthlonX', logo: '/images/AthlonX/athlonx.svg', bg: '#000000' },
+  { name: 'Punto Cero', logo: '/images/PuntoCero/logo-nombre.webp' },
+  { name: 'AthlonX', logo: '/images/AthlonX/logo-nombre.webp', bg: '#000000' },
 ]
 
 export const reasons = [

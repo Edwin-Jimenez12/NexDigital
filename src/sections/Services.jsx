@@ -5,7 +5,7 @@ import SectionHeader from '../components/SectionHeader'
 import Icon from '../components/Icon'
 import Button from '../components/Button'
 
-/* Servicios: lista seleccionable a la izquierda y detalle animado a la derecha. */
+/* Servicios: Lista seleccionable a la izquierda y detalle animado a la derecha. */
 export default function Services() {
   const [active, setActive] = useState(services[0].id)
   const current = services.find((s) => s.id === active)

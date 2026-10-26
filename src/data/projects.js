@@ -33,7 +33,7 @@ export const projects = [
     statusBar: { bg: '#000000', fg: '#FFFFFF' },
     summary: 'El rendimiento se construye. Nuestra propia marca, diseñada y desarrollada por Nex Digital.',
     tags: ['Marca propia', 'Diseño y desarrollo', 'En funcionamiento'],
-    // Sin capturas todavía: se muestra una tarjeta de marca. Al agregar athlonx-desktop.webp y
+    // Sin capturas todavía: Se muestra una tarjeta de marca. Al agregar athlonx-desktop.webp y
     // athlonx-mobile.webp en public/images/proyectos/, cambia esto a true.
     screenshots: false,
     logo: '/images/AthlonX/athlonx.svg',
