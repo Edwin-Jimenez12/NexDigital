@@ -1,40 +1,36 @@
 import Menu from '../components/Menu'
-import PlanSections from '../assets/plans/PlansSections'
-import Bottom from '../components/Bottom';
-import Launch from '../assets/plans/Launch'
-import Start from '../assets/plans/Start'
-import Growth from '../assets/plans/Growth'
-import Bussiness from '../assets/plans/Bussiness'
-import Personalized from '../assets/plans/Personalized'
-import Comparison from '../assets/plans/Comparison'
-import PlanAdvisor from '../assets/plans/PlanAdvisor'
+import Bottom from '../components/Bottom'
+import PlanCards from '../sections/PlanCards'
+import CustomProject from '../sections/CustomProject'
+import Comparison from '../sections/Comparison'
+import PlanFinder from '../sections/PlanFinder'
 
 function Plans() {
   return (
-    <main>
-      <section
-        className="relative min-h-[500px] bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/FondoPlans.png')",
-        }}
-      >
-        <Menu />
-        <div className="flex min-h-[500px] items-center justify-center pt-[72px]">
-          <PlanSections />
-        </div>
-      </section>
-      <div className="flex flex-col items-stretch gap-5 p-5 md:flex-row md:justify-between md:gap-2 md:p-10">
-        <Launch/>
-        <Start/>
-        <Growth/>
-        <Bussiness/>
-      </div>
-      <Personalized />
-      <Comparison />
-      <PlanAdvisor />
+    <>
+      <Menu />
+      <main>
+        <section aria-labelledby="planes-title" className="relative overflow-hidden pt-36 pb-16 lg:pt-44">
+          <div className="grid-bg pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_top,black_35%,transparent_75%)]" aria-hidden="true" />
+          <div className="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[800px] -translate-x-1/2 rounded-full bg-nex/20 blur-[120px]" aria-hidden="true" />
+          <div className="container-x relative grid justify-items-center gap-5 text-center">
+            <span className="hero-in eyebrow" style={{ '--i': 0 }}>Planes</span>
+            <h1 id="planes-title" className="hero-in max-w-3xl font-host text-[clamp(2.6rem,6vw,4.8rem)] leading-[1] font-bold tracking-tight text-white" style={{ '--i': 1 }}>
+              Elige el plan ideal para <span className="text-nex">tu negocio</span>
+            </h1>
+            <p className="hero-in max-w-2xl text-lg text-ash/80" style={{ '--i': 2 }}>
+              Soluciones web diseñadas para adaptarse a cada etapa de tu negocio. Todos nuestros planes incluyen diseño profesional, tecnología moderna y un enfoque en resultados.
+            </p>
+          </div>
+        </section>
+        <PlanCards />
+        <CustomProject />
+        <Comparison />
+        <PlanFinder />
+      </main>
       <Bottom />
-    </main>
-  );
+    </>
+  )
 }
 
-export default Plans;
+export default Plans

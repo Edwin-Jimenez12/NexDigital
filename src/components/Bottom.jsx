@@ -1,130 +1,109 @@
-import { ChevronRight, MapPin, Clock5, Mail } from 'lucide-react'
-import { FaWhatsapp, FaInstagram, FaFacebook} from 'react-icons/fa6'
-import { createWhatsAppLink, WHATSAPP_DISPLAY, WHATSAPP_MESSAGES } from '../config/whatsapp'
-
-const EMAIL = 'nexdigitaldev@gmail.com'
-const EMAIL_LINK = `mailto:${EMAIL}?subject=${encodeURIComponent(
-    'Consulta desde la página de Nex Digital'
-)}&body=${encodeURIComponent(
-    'Hola, visité la página web de Nex Digital y quisiera recibir información sobre sus servicios.'
-)}`
+import { ArrowUpRight, Clock5, Mail, MapPin } from 'lucide-react'
+import { FaFacebook, FaInstagram, FaWhatsapp } from 'react-icons/fa6'
+import { company, nav } from '../data/company'
+import { plans } from '../data/plans'
+import { athlonx } from '../data/athlonx'
 
 function Bottom() {
-    const planes = ['Plan Launch', 'Plan Start', 'Plan Growth', 'Plan Business', 'Plan Personalizado']
-    const contactos = [
-        { contacto: WHATSAPP_DISPLAY, icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general) },
-        { contacto: EMAIL, icon: Mail, enlace: EMAIL_LINK },
-        { contacto: 'Ciudad de Panamá, Panamá', icon: MapPin, enlace:"https://maps.app.goo.gl/f2dmNyEu5aKRCsqD8"},
-        { contacto: 'Lun-Vie: 9:00 am-6:00 pm.', icon: Clock5 }
-    ]
-    const follow = [
-        {follow: 'Instagram', icon: FaInstagram, enlace:'https://www.instagram.com/nexdigital.dev'},
-        {follow: 'Facebook', icon: FaFacebook, enlace:''},
-        {follow: 'WhatsApp', icon: FaWhatsapp, enlace: createWhatsAppLink(WHATSAPP_MESSAGES.general)}
-    ]
-    return (
-        <div className="bg-[#060D17] text-[#EAE9E9]/95 px-10 font-host py-5">
-            <div className="flex flex-col md:flex-row justify-between gap-5">
-                <div className="flex flex-col gap-4 items-start max-w-xs ">
-                    <img src="/logo.svg" alt="" className="h-15 w-auto " />
-                    <div className="hidden md:flex flex-col gap-2">
-                        <p>Desarrollamos páginas web modernas, rápidas y funcionales
-                            que ayudan a tu negocio a crecer en internet.
-                        </p>
-                        <div className="bg-[#0465F1] h-[1px] w-15 rounded hidden md:flex"></div>
-                    </div>
-                </div>
-                {/* SERVICIOS */}
-                <div className='flex flex-col gap-4'>
-                    <div>
-                        <h1 className='font-bold text-2xl'>Servicios</h1>
-                        <div className="bg-[#0465F1] h-[1px] w-15 rounded md:flex"></div>
-                    </div>
-                    <div className='flex flex-col gap-1 cursor-pointer '>
-                        {planes.map((plan) => (
-                            <a key={plan} href="/planes">
-                                <div
-                                className="flex cursor-pointer justify-between gap-2 rounded-md px-2 py-1 transition-all duration-300 hover:scale-[1.03] hover:bg-[#0465F1]/15"
-                            >
-                                <h2>{plan}</h2>
-                                <ChevronRight className="text-[#0465F1]" />
-                            </div>
-                            </a>
-                        ))}
-                    </div>
-                </div>
-                {/* CONTACTO */}
-                <div className='flex flex-col gap-4'>
-                    <div>
-                        <h1 className='font-bold text-2xl'>Contacto</h1>
-                        <div className="bg-[#0465F1] h-[1px] w-15 rounded md:flex mb-3 "></div>
-                        {contactos.map(({ contacto, icon: Icon, enlace }) => (
-                            <a
-                                key={contacto}
-                                href={enlace}
-                                target={enlace?.startsWith('http') ? "_blank" : undefined}
-                                rel={enlace?.startsWith('http') ? "noopener noreferrer" : undefined}
-                                className={`flex gap-2 py-1 pl-2  ${enlace ? "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15 " 
-                                    : "cursor-pointer hover:scale-103 transition-all duration-300 rounded hover:bg-[#0465F1]/15"}`}
-                            >
-                                <Icon
-                                    className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
-                                        }`}
-                                /><span>{contacto}</span>
-                            </a>
-                        ))}
-                    </div>
-                </div>
-                {/* SIGUENOS */}
-                <div className='flex flex-col'>
-                        <h1 className='font-bold text-2xl'>Siguenos</h1>
-                        <div className="bg-[#0465F1] h-[1px] w-15 rounded mb-2 flex "></div>
-                        {follow.map(({ follow, icon: Icon, enlace }) => (
-                            <div key={follow} className='flex gap-2 cursor-pointer hover:scale-103 transition-all duration-300'>
-                                <a
-                                    href={enlace}
-                                    target={enlace ? "_blank" : undefined}
-                                    rel={enlace ? "noopener noreferrer" : undefined}
-                                    className='hover:bg-[#0465F1]/15 flex flex-row gap-2 py-1 rounded-md px-2'
-                                >
-                                    <Icon
-                                    className={`shrink-0 text-[#0465F1] ${Icon === FaWhatsapp ? "size-6" : "size-6"
-                                        }`}
-                                /><span>{follow}</span>
-                                </a>
-                            </div>
-                        ))}
-                </div>
-            </div>
-            <div className="flex flex-col md:flex-row md:justify-between items-center pt-3">
-                <p className="hidden md:flex">© 2026 Nex Digital. Todos los derecho reservados.</p>
-                <div className="flex flex-col md:flex-row items-center gap-5">
-                    <p className="flex flex-col md:flex-row md:gap-2 items-center">
-                        <a
-                            href="/terminos-y-condiciones"
-                            className="transition-colors duration-300 hover:text-[#0465F1]"
-                        >
-                            Términos y condiciones
-                        </a>
-                        <div className="bg-[#EAE9E9] h-6 w-[1px] rounded hidden md:flex"></div>
-                        <a
-                            href="/politica-de-privacidad"
-                            className="transition-colors duration-300 hover:text-[#0465F1]"
-                        >
-                            Política de privacidad
-                        </a>
-                    </p>
-                    <div className="flex gap-2 items-center">
-                        <div className="bg-[#EAE9E9] rounded-sm px-2 py-2">
-                            <img src="/images/yappy-color-landscape.svg" alt="Yappy" className="h-5 w-auto" />
-                        </div>
-                        <div className="bg-[#EAE9E9] rounded-sm px-2 py-2" >
-                            <img src="/images/Paypal.svg" alt="Yappy" className="h-5 w-auto" />
-                        </div>
-                    </div>
-                </div>
-                <p className="flex md:hidden text-center mt-5 md:mt-0">© 2026 Nex Digital. <br className="md:hidden" />Todos los derechos reservados.</p>
-            </div>
+  const year = new Date().getFullYear()
+  const contacts = [
+    { label: company.phone, icon: FaWhatsapp, href: company.whatsapp },
+    { label: company.email, icon: Mail, href: company.emailLink },
+    { label: company.location, icon: MapPin, href: company.mapLink },
+    { label: company.schedule, icon: Clock5 },
+  ]
+  const social = [
+    { label: 'Instagram', icon: FaInstagram, href: company.instagram },
+    { label: 'Facebook', icon: FaFacebook, href: company.facebook },
+    { label: 'WhatsApp', icon: FaWhatsapp, href: company.whatsapp },
+  ].filter((s) => s.href)
+
+  return (
+    <footer className="border-t border-snow/10 bg-black font-inter text-snow">
+      <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div className="grid content-start gap-5">
+          <img src="/logo.svg" alt="Nex Digital" className="h-11 w-auto self-start justify-self-start" />
+          <p className="max-w-xs text-sm text-ash/70">{company.description}</p>
+          <ul className="flex gap-2">
+            {social.map(({ label, icon: Icon, href }) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="grid size-11 place-items-center rounded-full border border-snow/15 transition-colors hover:border-nex hover:bg-nex"
+                >
+                  <Icon aria-hidden="true" className="size-4" />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
-    )
-} export default Bottom
+
+        <div className="grid content-start gap-4">
+          <h2 className="font-host text-lg font-bold">Planes</h2>
+          <ul className="grid gap-2 text-sm text-ash/75">
+            {plans.map((p) => (
+              <li key={p.id}>
+                <a href="/planes" className="hover:text-white">Plan {p.name}</a>
+              </li>
+            ))}
+            <li>
+              <a href="/planes#personalizado" className="hover:text-white">Proyecto personalizado</a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="grid content-start gap-4">
+          <h2 className="font-host text-lg font-bold">Navegación</h2>
+          <ul className="grid gap-2 text-sm text-ash/75">
+            {nav.map((n) => (
+              <li key={n.label}>
+                <a href={n.href} className="hover:text-white">{n.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="grid content-start gap-4">
+          <h2 className="font-host text-lg font-bold">Contacto</h2>
+          <ul className="grid gap-3 text-sm text-ash/80">
+            {contacts.map(({ label, icon: Icon, href }) => (
+              <li key={label}>
+                {href ? (
+                  <a href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="flex items-center gap-3 hover:text-white">
+                    <Icon aria-hidden="true" className="size-4 shrink-0 text-nex" /> {label}
+                  </a>
+                ) : (
+                  <span className="flex items-center gap-3">
+                    <Icon aria-hidden="true" className="size-4 shrink-0 text-nex" /> {label}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div className="border-t border-snow/10">
+        <div className="container-x flex flex-wrap items-center justify-between gap-4 py-6 text-xs text-ash/60">
+          <p>© {year} Nex Digital. Todos los derechos reservados.</p>
+          <a href={athlonx.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:text-athlon">
+            AthlonX es una empresa de Nex Digital <ArrowUpRight aria-hidden="true" className="size-3.5" />
+          </a>
+          <div className="flex flex-wrap items-center gap-4">
+            <a href="/terminos-y-condiciones" className="hover:text-white">Términos y condiciones</a>
+            <a href="/politica-de-privacidad" className="hover:text-white">Política de privacidad</a>
+            <span className="flex items-center gap-2">
+              <span className="rounded bg-snow px-2 py-1.5"><img src="/images/yappy-color-landscape.svg" alt="Yappy" className="h-4 w-auto" /></span>
+              <span className="rounded bg-snow px-2 py-1.5"><img src="/images/Paypal.svg" alt="PayPal" className="h-4 w-auto" /></span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
+export default Bottom
