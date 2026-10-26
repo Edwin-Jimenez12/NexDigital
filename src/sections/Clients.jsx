@@ -14,7 +14,7 @@ export default function Clients() {
           <h2 id="clientes-title" className="font-host text-3xl font-bold tracking-tight">Empresas que confían en nosotros</h2>
           <p className="text-graphite/70">Trabajamos junto a marcas que apuestan por el diseño, la estrategia y la innovación para crecer en digital.</p>
         </div>
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3">
           {clients.map((c, i) => (
             <li
               key={c.name}

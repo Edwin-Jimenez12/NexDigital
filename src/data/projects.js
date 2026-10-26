@@ -1,6 +1,7 @@
 /*
   Proyectos en los que ha participado Nex Digital.
   Imágenes en public/images/proyectos/<slug>-desktop.webp, -mobile.webp e -icon.svg
+  (`screenshots: false` muestra una tarjeta de marca en lugar del mockup)
 */
 export const projects = [
   {
@@ -14,17 +15,6 @@ export const projects = [
     tags: ['Diseño en Figma', 'Desarrollo web', 'Formularios con Supabase'],
   },
   {
-    slug: 'panama-viajero',
-    name: 'Panamá Viajero',
-    category: 'Turismo · Plataforma digital',
-    url: 'https://panama-viajero.pages.dev/',
-    color: '#4956A2',
-    statusBar: { bg: '#4956A2', fg: '#FFFFFF' },
-    summary: 'Plataforma para descubrir destinos, hospedajes, restaurantes y experiencias turísticas en Panamá.',
-    note: 'En colaboración con Davis Marketing',
-    tags: ['Interfaces responsivas', 'Componentes reutilizables', 'Google Apps Script'],
-  },
-  {
     slug: 'punto-cero',
     name: 'Punto Cero',
     category: 'Agencia creativa · Marketing digital',
@@ -33,5 +23,19 @@ export const projects = [
     statusBar: { bg: '#FFFFFF', fg: '#111111' },
     summary: 'Sitio de una agencia creativa panameña que ayuda a marcas y negocios a mejorar su presencia digital.',
     tags: ['Sitio web', 'Sección de planes', 'Diseño responsivo'],
+  },
+  {
+    slug: 'athlonx',
+    name: 'AthlonX',
+    category: 'Empresa del grupo Nex Digital',
+    url: 'https://athlonx.world/',
+    color: '#88DF44',
+    statusBar: { bg: '#000000', fg: '#FFFFFF' },
+    summary: 'El rendimiento se construye. Nuestra propia marca, diseñada y desarrollada por Nex Digital.',
+    tags: ['Marca propia', 'Diseño y desarrollo', 'En funcionamiento'],
+    // Sin capturas todavía: se muestra una tarjeta de marca. Al agregar athlonx-desktop.webp y
+    // athlonx-mobile.webp en public/images/proyectos/, cambia esto a true.
+    screenshots: false,
+    logo: '/images/AthlonX/athlonx.svg',
   },
 ]

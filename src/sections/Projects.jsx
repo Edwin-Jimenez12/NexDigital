@@ -5,6 +5,24 @@ import SectionHeader from '../components/SectionHeader'
 import DeviceShowcase from '../components/mockups/DeviceShowcase'
 import Button from '../components/Button'
 
+/* Tarjeta de marca para proyectos que aún no tienen capturas. */
+function BrandPanel({ name, logo, color, summary }) {
+  return (
+    <div
+      className="relative grid aspect-[16/10] place-items-center overflow-hidden rounded-2xl border bg-black p-8"
+      style={{ borderColor: `${color}40` }}
+    >
+      <div className="grid-bg pointer-events-none absolute inset-0 opacity-70" aria-hidden="true" />
+      <div className="pointer-events-none absolute -bottom-24 left-1/2 size-80 -translate-x-1/2 rounded-full blur-[110px]" style={{ background: `${color}40` }} aria-hidden="true" />
+      <div className="relative grid justify-items-center gap-5 text-center">
+        <img src={logo} alt={`Logo de ${name}`} className="h-24 w-auto sm:h-32" />
+        <p className="font-host text-4xl font-bold text-white sm:text-5xl">{name}</p>
+        <p className="font-host text-lg font-semibold" style={{ color }}>{summary.split('.')[0]}.</p>
+      </div>
+    </div>
+  )
+}
+
 /* Proyectos: selector a la izquierda y vista en Mac + teléfono a la derecha. */
 export default function Projects() {
   const [active, setActive] = useState(projects[0].slug)
@@ -66,7 +84,7 @@ export default function Projects() {
           </div>
 
           <div key={current.slug + '-mock'} className="fade-swap min-w-0">
-            <DeviceShowcase {...current} />
+            {current.screenshots === false ? <BrandPanel {...current} /> : <DeviceShowcase {...current} />}
           </div>
         </div>
       </div>
