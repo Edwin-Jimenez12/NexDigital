@@ -4,7 +4,146 @@
 @import "@fontsource-variable/inter/opsz.css";
 @import "@fontsource-variable/inter/opsz-italic.css";
 
+/* Paleta de marca NEX Digital (ver src/Colores) + verde de AthlonX */
 @theme {
-  --font-host: "Host Grotesk Variable", sans-serif;
-  --font-inter: "Inter Variable", sans-serif;
+  --font-host: "Host Grotesk Variable", system-ui, sans-serif;
+  --font-inter: "Inter Variable", system-ui, sans-serif;
+
+  --color-nex: #0465f1;
+  --color-nex-soft: #3b86ff;
+  --color-night: #060d17;
+  --color-panel: #0d1520;
+  --color-panel-2: #121c2b;
+  --color-snow: #eae9e9;
+  --color-ash: #d1d5db;
+  --color-slate: #6b7280;
+  --color-graphite: #111111;
+  --color-athlon: #88df44;
+
+  --animate-marquee: marquee 38s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-night font-inter text-snow antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  ::selection {
+    @apply bg-nex text-white;
+  }
+  :focus-visible {
+    @apply rounded-sm outline-2 outline-offset-4 outline-nex;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-host text-xs font-semibold tracking-[0.22em] text-nex uppercase;
+  }
+
+  /* Cuadrícula técnica de fondo */
+  .grid-bg {
+    background-image:
+      linear-gradient(rgb(234 233 233 / 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(234 233 233 / 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  /* Luz que sigue al cursor: usa --x y --y definidos por useSpotlight */
+  .spotlight {
+    background: radial-gradient(520px circle at var(--x, 50%) var(--y, 30%), rgb(4 101 241 / 0.22), transparent 65%);
+  }
+  .card-spotlight {
+    background: radial-gradient(360px circle at var(--x, -100%) var(--y, -100%), rgb(4 101 241 / 0.16), transparent 60%);
+  }
+
+  /* Aparición progresiva: solo se oculta si hay JS y no se pidió reducir movimiento */
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--delay, 0ms);
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .js .hero-in {
+    animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms + 60ms);
+  }
+  @keyframes hero-in {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+  }
+
+  /* Palabra que rota en el título principal */
+  .word-in {
+    animation: word-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  @keyframes word-in {
+    from {
+      opacity: 0;
+      transform: translateY(0.4em);
+      filter: blur(6px);
+    }
+  }
+
+  .fade-swap {
+    animation: fade-swap 0.45s ease both;
+  }
+  @keyframes fade-swap {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes flow {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(300%);
+  }
 }
