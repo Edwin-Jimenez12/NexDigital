@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Monitor, Smartphone } from 'lucide-react'
 
 /*
-  Demo interactiva del hero: el visitante elige un tipo de negocio y un dispositivo
+  Demo interactiva del hero: El visitante elige un tipo de negocio y un dispositivo
   y la mini página de ejemplo se transforma. Son ejemplos, no clientes reales.
 */
 const presets = [

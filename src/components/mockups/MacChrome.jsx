@@ -38,7 +38,7 @@ export function MacMenuBar({ app = 'Safari' }) {
   )
 }
 
-/* Barra de herramientas de Safari: semáforo, navegación, pestaña con favicon y dirección */
+/* Barra de herramientas de Safari: Semáforo, navegación, pestaña con favicon y dirección */
 export function SafariToolbar({ host, logo, title }) {
   return (
     <svg viewBox="0 0 1440 52" className="block w-full" aria-hidden="true">

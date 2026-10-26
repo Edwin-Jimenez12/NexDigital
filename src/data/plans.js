@@ -100,7 +100,7 @@ export const customProject = {
 }
 
 /*
-  Asistente para elegir plan: cada respuesta suma "páginas" y requisitos;
+  Asistente para elegir plan: Cada respuesta suma "páginas" y requisitos;
   se recomienda el plan más pequeño que los cubre.
 */
 export const advisorQuestions = [

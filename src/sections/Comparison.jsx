@@ -10,7 +10,7 @@ function Value({ value }) {
   return <span>{value}</span>
 }
 
-/* Comparativa: tabla en escritorio con columna resaltable y vista por plan en móvil. */
+/* Comparativa: Tabla en escritorio con columna resaltable y vista por plan en móvil. */
 export default function Comparison() {
   const [selected, setSelected] = useState('growth')
   const plan = plans.find((p) => p.id === selected)
@@ -37,7 +37,7 @@ export default function Comparison() {
           ))}
         </div>
 
-        {/* Móvil: lista del plan seleccionado */}
+        {/* Móvil: Lista del plan seleccionado */}
         <ul key={selected} className="fade-swap grid rounded-2xl border border-snow/10 bg-panel lg:hidden">
           {comparison.map((row) => (
             <li key={row.name} className="flex items-center justify-between gap-4 border-b border-snow/10 px-5 py-3.5 text-sm last:border-b-0">
@@ -55,7 +55,7 @@ export default function Comparison() {
           </li>
         </ul>
 
-        {/* Escritorio: tabla completa */}
+        {/* Escritorio: Tabla completa */}
         <div className="hidden overflow-x-auto rounded-2xl border border-snow/10 bg-panel lg:block">
           <table className="w-full min-w-[850px] border-collapse text-center text-sm">
             <thead>
